@@ -80,14 +80,16 @@ func main() {
 	// fmt.Println(doMap())
 
 	// ===================================================================
-	jsonString := dotoJSON(doSimple())
-	message := doFromJSON(jsonString, reflect.TypeOf(pb.Simple{}))
-	fmt.Println(jsonString)
-	fmt.Println(message)
+	// jsonString := dotoJSON(doSimple())
+	// message := doFromJSON(jsonString, reflect.TypeOf(pb.Simple{}))
+	// fmt.Println(jsonString)
+	// fmt.Println(message)
 	// ===================================================================
-	jsonString = dotoJSON(doComplex())
-	message = doFromJSON(jsonString, reflect.TypeOf(pb.Complex{}))
-	fmt.Println(jsonString)
-	fmt.Println(message)
+	// jsonString = dotoJSON(doComplex())
+	// message = doFromJSON(jsonString, reflect.TypeOf(pb.Complex{}))
+	// fmt.Println(jsonString)
+	// fmt.Println(message)
+	// ===================================================================
+	fmt.Println(doFromJSON(`{"id": 42, "unknown": "test"}`, reflect.TypeOf(pb.Simple{})))
 	// ===================================================================
 }
